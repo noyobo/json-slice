@@ -1,0 +1,59 @@
+{
+  "name": "json-slice",
+  "version": "2.0.0",
+  "description": "require module.exports or exports from file.",
+  "keywords": [
+    "esmodule",
+    "require"
+  ],
+  "homepage": "https://github.com/noyobo/json-slice#readme",
+  "bugs": {
+    "url": "https://github.com/noyobo/json-slice/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/noyobo/json-slice.git"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Youbao Nong",
+    "email": "noyobo@gmail.com",
+    "url": "https://github.com/noyobo"
+  },
+  "main": "./lib/index.js",
+  "files": [
+    "lib/"
+  ],
+  "scripts": {
+    "build": "tsc --project tsconfig.build.json",
+    "clean": "rm -rf ./lib/",
+    "lint": "eslint ./src/ --fix",
+    "test": "vitest --coverage --run",
+    "test:watch": "vitest --watch",
+    "typecheck": "tsc --noEmit"
+  },
+  "lint-staged": {
+    "*.ts": "npx @biomejs/biome check --fix"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.8.1",
+    "@swc/core": "^1.5.28",
+    "@swc/helpers": "^0.5.11",
+    "@types/node": "^20.14.2",
+    "@vitest/coverage-v8": "^2.0.5",
+    "conventional-changelog-conventionalcommits": "^7.0.2",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.6",
+    "prettier": "^3.3.2",
+    "standard-version": "^9.5.0",
+    "typescript": "^5.4.5",
+    "vitest": "^2.0.5"
+  },
+  "engines": {
+    "node": ">=12.0"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
+}
